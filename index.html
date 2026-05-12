@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>宏哥的 AI 工作流策略書｜江昱德一對一顧問</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* 深咖紙張層次 */
+  --paper:      #2B1F18;
+  --paper-2:    #3A2A22;
+  --paper-3:    #1F1611;
+  --paper-soft: #44322A;
+
+  /* 暖米白文字 */
+  --ink:   #F5EFE5;
+  --ink-2: #E5DCCD;
+  --ink-3: #BFB3A1;
+  --ink-4: #897E6D;
+
+  /* 軟金強調 */
+  --gold:      #C9A961;
+  --gold-deep: #E5C77D;
+  --gold-soft: #8A6F3A;
+  --gold-bg:   rgba(201,169,97,0.14);
+
+  /* 暖陶土第二強調 */
+  --clay:      #B07A4F;
+  --clay-deep: #D49872;
+  --clay-soft: #7A4F30;
+  --clay-bg:   rgba(176,122,79,0.16);
+
+  /* 線條 */
+  --line:   rgba(245,239,229,0.12);
+  --line-2: rgba(245,239,229,0.06);
+  --line-3: rgba(245,239,229,0.22);
+
+  /* 陰影 */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4), 0 2px 4px rgba(0,0,0,0.3);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.5), 0 4px 8px rgba(0,0,0,0.3);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink-2);
+  background: var(--paper);
+  font-family: "Noto Sans TC", "PingFang TC", -apple-system, sans-serif;
+  font-size: 18px;
+  line-height: 1.85;
+  font-feature-settings: "palt";
+}
+a { color: inherit; text-decoration: none; }
+
+/* Topbar */
+.topbar {
+  border-bottom: 1px solid var(--line);
+  background: rgba(43,31,24,0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky; top: 0; z-index: 50;
+}
+.topbar .inner {
+  max-width: 1320px; margin: 0 auto;
+  padding: 18px 5vw;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.topbar .brand {
+  font-family: "Noto Serif TC", serif;
+  font-size: 18px; font-weight: 600; color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.topbar .brand .sub {
+  font-family: "Inter", sans-serif;
+  font-size: 14px; color: var(--gold);
+  letter-spacing: 0.18em; text-transform: uppercase;
+  font-weight: 600; margin-left: 12px;
+}
+.topbar nav { display: flex; gap: 28px; }
+.topbar nav a {
+  color: var(--ink-2); font-size: 17px; font-weight: 500;
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.topbar nav a:hover { color: var(--gold-deep); border-bottom-color: var(--gold); }
+.nav-toggle {
+  display: none; background: transparent; border: 1px solid var(--line);
+  color: var(--ink); padding: 8px 14px; border-radius: 8px;
+  font-size: 16px; cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  padding: 100px 5vw 90px;
+  max-width: 1320px; margin: 0 auto;
+}
+.hero .eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 16px; letter-spacing: 0.24em;
+  color: var(--gold); font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 32px;
+  display: flex; align-items: center; gap: 14px;
+}
+.hero .eyebrow::before {
+  content: ""; width: 36px; height: 2px; background: var(--gold);
+}
+.hero h1 {
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  line-height: 1.28; font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 28px;
+  max-width: 900px;
+}
+.hero h1 em {
+  font-style: normal; color: var(--gold-deep);
+  position: relative; display: inline-block;
+}
+.hero h1 em::after {
+  content: ""; position: absolute;
+  left: 0; right: 0; bottom: 0.08em; height: 0.3em;
+  background: var(--gold-soft); z-index: -1; opacity: 0.5;
+}
+.hero .lead {
+  font-size: 19px; color: var(--ink-2);
+  max-width: 760px; margin: 0 0 36px;
+  line-height: 1.8;
+}
+.hero .meta {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  margin-top: 20px;
+}
+.hero .pill {
+  background: var(--paper-2); border: 1px solid var(--line);
+  color: var(--ink-2); padding: 11px 22px; border-radius: 99px;
+  font-size: 17px; font-weight: 500;
+}
+.hero .pill strong {
+  color: var(--gold-deep); font-weight: 600;
+  margin-right: 6px;
+}
+
+/* Sections */
+.section {
+  padding: 90px 5vw 70px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.section + .section { border-top: 1px solid var(--line); }
+
+.section-head {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 48px;
+  align-items: end;
+}
+.section-head .num-block {
+  font-family: "Inter", sans-serif;
+  font-size: 15px; letter-spacing: 0.22em;
+  color: var(--gold); font-weight: 600;
+  text-transform: uppercase;
+}
+.section-head .num-block .num {
+  display: block;
+  font-family: "Noto Serif TC", serif;
+  font-size: 48px; color: var(--ink); font-weight: 600;
+  letter-spacing: 0; margin-top: 6px; line-height: 1;
+}
+.section-head h2 {
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(1.9rem, 3.2vw, 2.4rem);
+  font-weight: 600; line-height: 1.32;
+  margin: 0 0 12px; color: var(--ink);
+}
+.section-head .section-lead {
+  color: var(--ink-3); font-size: 18px;
+  line-height: 1.75; max-width: 780px;
+}
+
+/* 現況快照行式表格 */
+.tension-table { border-top: 2px solid var(--gold); }
+.tension-row {
+  display: grid;
+  grid-template-columns: 50px 1.2fr 1fr 1.8fr;
+  gap: 32px; padding: 30px 18px;
+  border-bottom: 1px solid var(--line);
+  transition: background-color 0.35s ease,
+              transform 0.4s cubic-bezier(0.2, 0.8, 0.3, 1),
+              box-shadow 0.4s ease;
+  border-radius: 8px;
+  align-items: center;
+}
+.tension-row:hover {
+  background-color: var(--paper-2);
+  transform: translateX(8px) translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+.tension-row .row-num {
+  font-family: "Inter", sans-serif;
+  font-size: 28px; font-weight: 600;
+  color: var(--gold); line-height: 1;
+}
+.tension-row .row-title {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.25rem; font-weight: 600;
+  color: var(--ink); line-height: 1.4;
+}
+.tension-row .row-status {
+  font-size: 17px; color: var(--ink-3);
+  line-height: 1.6;
+}
+.tension-row .row-issue {
+  font-size: 17px; color: var(--ink-2);
+  line-height: 1.7;
+  padding-left: 18px;
+  border-left: 2px solid var(--clay);
+}
+
+/* CTA 卡片 - 三個槓桿點 */
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.cta-card {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 32px 30px 36px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.3s;
+  position: relative; overflow: hidden;
+}
+.cta-card::before {
+  content: ""; position: absolute;
+  left: 0; top: 0; bottom: 0; width: 4px;
+  background: var(--gold);
+  transform: scaleY(0); transform-origin: top;
+  transition: transform 0.4s ease;
+}
+.cta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  background: var(--paper-soft);
+  border-color: var(--gold-soft);
+}
+.cta-card:hover::before { transform: scaleY(1); }
+.cta-card .cta-label {
+  font-family: "Inter", sans-serif; font-size: 15px;
+  letter-spacing: 0.18em; color: var(--gold); font-weight: 600;
+  text-transform: uppercase; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.cta-card .cta-label::before {
+  content: ""; width: 18px; height: 1px; background: var(--gold);
+}
+.cta-card .cta-name {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.4rem; font-weight: 600;
+  color: var(--ink); line-height: 1.4;
+  margin: 0 0 16px;
+}
+.cta-card .cta-desc {
+  font-size: 17px; color: var(--ink-2);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.cta-card .cta-list {
+  list-style: none; padding: 0; margin: 0;
+}
+.cta-card .cta-list li {
+  font-size: 16px; color: var(--ink-3);
+  line-height: 1.7;
+  padding: 8px 0 8px 22px;
+  position: relative;
+  border-top: 1px solid var(--line-2);
+}
+.cta-card .cta-list li:first-child { border-top: none; }
+.cta-card .cta-list li::before {
+  content: "→"; position: absolute;
+  left: 0; top: 8px; color: var(--gold);
+  font-family: "Inter", sans-serif; font-weight: 400;
+}
+.cta-repo {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 24px; padding: 14px 18px;
+  background: var(--paper);
+  border: 1px solid var(--gold-soft);
+  border-radius: 10px;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+.cta-repo:hover {
+  background: var(--paper-3);
+  border-color: var(--gold);
+  transform: translateX(4px);
+}
+.cta-repo-label {
+  font-family: "Inter", sans-serif;
+  font-size: 15px; letter-spacing: 0.12em;
+  color: var(--gold-deep); font-weight: 600;
+  text-transform: uppercase;
+}
+.cta-repo-arrow {
+  font-size: 1.1rem; color: var(--gold);
+  transition: transform 0.3s;
+}
+.cta-repo:hover .cta-repo-arrow {
+  transform: translateX(4px);
+}
+
+/* 不做清單 */
+.dont-list { border-top: 2px solid var(--clay); }
+.dont-row {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr 1fr;
+  gap: 28px; padding: 26px 18px;
+  border-bottom: 1px solid var(--line);
+  transition: background-color 0.35s, transform 0.4s cubic-bezier(0.2, 0.8, 0.3, 1);
+  border-radius: 8px;
+  align-items: start;
+}
+.dont-row:hover {
+  background-color: var(--paper-2);
+  transform: translateX(6px);
+}
+.dont-row .dont-name {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--ink); line-height: 1.4;
+}
+.dont-row .dont-reason {
+  font-size: 17px; color: var(--ink-2);
+  line-height: 1.7;
+}
+.dont-row .dont-when {
+  font-size: 16px; color: var(--clay-deep);
+  font-weight: 500;
+  padding: 8px 14px;
+  background: var(--clay-bg);
+  border: 1px solid var(--clay-soft);
+  border-radius: 99px;
+  display: inline-block;
+  justify-self: start;
+}
+
+/* Manifesto 深色金句區塊 */
+.manifesto {
+  background: var(--paper-3);
+  color: var(--ink);
+  padding: 100px 5vw 90px;
+  text-align: center;
+  border-top: 1px solid var(--gold-soft);
+  border-bottom: 1px solid var(--gold-soft);
+  margin: 60px 0;
+}
+.manifesto .inner {
+  max-width: 880px; margin: 0 auto;
+}
+.manifesto .eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 15px; letter-spacing: 0.32em;
+  color: var(--gold); font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+.manifesto h2 {
+  font-family: "Noto Serif TC", serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600; line-height: 1.5;
+  color: var(--ink); margin: 0 0 32px;
+}
+.manifesto p {
+  font-size: 18px;
+  color: var(--ink-2);
+  line-height: 1.95;
+  margin: 0 auto 20px;
+  max-width: 720px;
+}
+.manifesto .quote {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.3rem; color: var(--gold-deep);
+  letter-spacing: 0.04em; font-weight: 500;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  line-height: 1.7;
+}
+
+/* 行動 checklist */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.action-block {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px 28px 32px;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.action-block:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold-soft);
+  box-shadow: var(--shadow-md);
+}
+.action-block .when {
+  font-family: "Inter", sans-serif;
+  font-size: 15px; letter-spacing: 0.2em;
+  color: var(--gold); font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.action-block .when-zh {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.5rem; font-weight: 600;
+  color: var(--ink); margin-bottom: 22px;
+  line-height: 1.3;
+}
+.action-block ul {
+  list-style: none; padding: 0; margin: 0;
+}
+.action-block li {
+  display: flex; align-items: start;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line-2);
+  font-size: 17px;
+  color: var(--ink-2);
+  line-height: 1.7;
+}
+.action-block li:first-child { border-top: none; }
+.action-block .check {
+  flex-shrink: 0;
+  width: 18px; height: 18px;
+  border: 1.5px solid var(--gold);
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+/* 附件 */
+.attach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+.attach-card {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 40px 36px;
+}
+.attach-card .attach-tag {
+  font-family: "Inter", sans-serif;
+  font-size: 14px; letter-spacing: 0.24em;
+  color: var(--gold); font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.attach-card h3 {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.55rem; font-weight: 600;
+  color: var(--ink); margin: 0 0 24px;
+  line-height: 1.4;
+}
+.attach-card .attach-body {
+  font-size: 17px; color: var(--ink-2);
+  line-height: 1.85;
+}
+.attach-card .attach-body h4 {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.05rem; font-weight: 600;
+  color: var(--gold-deep);
+  margin: 28px 0 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.attach-card .attach-body h4:first-child {
+  margin-top: 0; padding-top: 0; border-top: none;
+}
+.attach-card .attach-body p { margin: 0 0 10px; }
+.attach-card .attach-body ul {
+  padding-left: 20px; margin: 8px 0;
+}
+.attach-card .attach-body li {
+  margin: 4px 0;
+}
+.attach-card .source {
+  font-size: 15px;
+  color: var(--ink-4);
+  font-style: italic;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line-2);
+}
+
+/* 推薦清單卡（橫跨兩欄） */
+.attach-list-card {
+  grid-column: 1 / -1;
+}
+
+/* 影片嵌入卡（16:9 響應式） */
+.video-card {
+  border-color: var(--gold-soft);
+}
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  margin: 28px 0 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--paper-3);
+  box-shadow: var(--shadow-lg);
+}
+.video-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.video-cta-bar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.recommend-list {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  border-top: 1px solid var(--line);
+}
+.recommend-list li {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 22px 4px;
+  border-bottom: 1px solid var(--line);
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+.recommend-list li:hover {
+  background-color: rgba(245,239,229,0.03);
+  padding-left: 14px;
+}
+.rec-tag {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 99px;
+  text-align: center;
+  justify-self: start;
+}
+.rec-tag-skill {
+  color: var(--gold-deep);
+  background: var(--gold-bg);
+  border: 1px solid var(--gold-soft);
+}
+.rec-tag-article {
+  color: var(--clay-deep);
+  background: var(--clay-bg);
+  border: 1px solid var(--clay-soft);
+}
+.rec-content {
+  min-width: 0;
+}
+.rec-title {
+  font-family: "Noto Serif TC", serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.rec-why {
+  font-size: 15px;
+  color: var(--ink-3);
+  line-height: 1.7;
+}
+.rec-link {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  font-weight: 600;
+  padding: 10px 18px;
+  border: 1px solid var(--gold-soft);
+  border-radius: 99px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
+}
+.rec-link:hover {
+  background: var(--gold);
+  color: var(--paper);
+  border-color: var(--gold);
+  transform: translateX(4px);
+}
+.rec-arrow {
+  font-size: 1.1rem;
+  transition: transform 0.3s;
+}
+.rec-link:hover .rec-arrow {
+  transform: translateX(3px);
+}
+
+/* 手機：清單項目降單欄 */
+@media(max-width: 720px) {
+  .recommend-list li {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px 4px;
+  }
+  .rec-link {
+    justify-self: start;
+  }
+}
+
+/* 附件變連結卡 */
+.attach-link {
+  display: block;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s, background 0.3s;
+  position: relative; overflow: hidden;
+}
+.attach-link::before {
+  content: ""; position: absolute;
+  left: 0; top: 0; bottom: 0; width: 4px;
+  background: var(--gold);
+  transform: scaleY(0); transform-origin: top;
+  transition: transform 0.4s ease;
+}
+.attach-link:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  background: var(--paper-soft);
+  border-color: var(--gold-soft);
+}
+.attach-link:hover::before { transform: scaleY(1); }
+.attach-cta {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-family: "Inter", sans-serif;
+  font-size: 16px; letter-spacing: 0.12em;
+  color: var(--gold-deep); font-weight: 600;
+  text-transform: uppercase;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.attach-cta .arrow {
+  font-size: 1.2rem; color: var(--gold);
+  transition: transform 0.3s;
+}
+.attach-link:hover .attach-cta .arrow {
+  transform: translateX(8px);
+}
+
+/* Footer */
+footer {
+  background: var(--paper-3);
+  padding: 70px 5vw 50px;
+  border-top: 1px solid var(--line);
+}
+footer .container {
+  max-width: 1320px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+}
+footer .brand-block .name {
+  font-family: "Noto Serif TC", serif;
+  font-size: 1.3rem; font-weight: 600;
+  color: var(--ink); margin-bottom: 8px;
+}
+footer .brand-block .tagline {
+  font-size: 16px; color: var(--gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+footer .brand-block p {
+  font-size: 16px; color: var(--ink-3);
+  line-height: 1.75;
+  margin: 0;
+}
+footer h5 {
+  font-family: "Inter", sans-serif;
+  font-size: 14px; letter-spacing: 0.2em;
+  color: var(--gold); font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+footer ul { list-style: none; padding: 0; margin: 0; }
+footer li {
+  font-size: 16px; color: var(--ink-3);
+  padding: 5px 0;
+  line-height: 1.6;
+}
+footer .copy {
+  max-width: 1320px; margin: 50px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 14px; color: var(--ink-4);
+  letter-spacing: 0.06em;
+  display: flex; justify-content: space-between;
+}
+
+/* RWD */
+@media(max-width: 900px) {
+  .nav-toggle { display: flex; }
+  .topbar nav {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--paper); flex-direction: column;
+    padding: 14px 5vw;
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar nav.open { display: flex; }
+  .section-head { grid-template-columns: 1fr; gap: 14px; }
+  .cta-grid { grid-template-columns: 1fr; }
+  .action-grid { grid-template-columns: 1fr; }
+  .tension-row {
+    grid-template-columns: 40px 1fr;
+  }
+  .tension-row .row-status,
+  .tension-row .row-issue { grid-column: 1 / -1; }
+  .dont-row { grid-template-columns: 1fr; gap: 10px; }
+  .attach-grid { grid-template-columns: 1fr; }
+  footer .container { grid-template-columns: 1fr; gap: 32px; }
+  footer .copy { flex-direction: column; gap: 6px; }
+}
+
+@media(max-width: 600px) {
+  .hero { padding: 70px 5vw 60px; }
+  .section { padding: 60px 5vw 50px; }
+  .manifesto { padding: 70px 5vw 60px; }
+  body { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="inner">
+    <div class="brand">
+      江昱德 顧問
+      <span class="sub">JIANGJIANG · STRATEGY</span>
+    </div>
+    <nav id="mainNav">
+      <a href="#current">現況快照</a>
+      <a href="#leverage">核心槓桿</a>
+      <a href="#dont">不做清單</a>
+      <a href="#system">知識累積</a>
+      <a href="#appendix">附件</a>
+    </nav>
+    <button class="nav-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')">選單</button>
+  </div>
+</header>
+
+<section class="hero">
+  <p class="eyebrow">CONSULTING STRATEGY · 2026.05.12</p>
+  <h1>宏哥的 <em>AI 工作流</em> 策略書</h1>
+  <p class="lead">這份策略書整理我們今天一對一顧問會議的核心建議。圍繞著一件事：把你已經跑得不錯的事情，調整成可以累積、可以複製、可以放大的工作流。</p>
+  <div class="meta">
+    <span class="pill"><strong>對象</strong>宏哥（一人公司）</span>
+    <span class="pill"><strong>顧問</strong>江昱德</span>
+    <span class="pill"><strong>會議</strong>2026-05-12 09:00</span>
+    <span class="pill"><strong>產業</strong>美國代理電商 · 清潔錠</span>
+  </div>
+</section>
+
+<!-- 現況快照 -->
+<section class="section" id="current">
+  <div class="section-head">
+    <div class="num-block">SECTION
+      <span class="num">01</span>
+    </div>
+    <div>
+      <h2>現況快照</h2>
+      <p class="section-lead">你的數字非常亮眼：去年 6-700 萬，今年目標 2000 萬，3 月起月營收破百萬。我從你的介紹裡，看到你已經在自己跑 AI 應用，方向很清楚。以下是我聽完之後，整理出來想跟你討論的三個張力點。</p>
+    </div>
+  </div>
+
+  <div class="tension-table">
+    <div class="tension-row">
+      <div class="row-num">01</div>
+      <div class="row-title">ERP 自動化</div>
+      <div class="row-status">用 Claude Code 試串各平台，爬蟲卡住</div>
+      <div class="row-issue">工具還在試水溫，預計 7-8 個月後會比較成熟，現在投入的時間成本可能會比較吃力。</div>
+    </div>
+    <div class="tension-row">
+      <div class="row-num">02</div>
+      <div class="row-title">素材自動化</div>
+      <div class="row-status">看到美國 AGI8 案例想複製，但台灣中文環境有差</div>
+      <div class="row-issue">大量生成容易讓品牌信任掉下來，先把品質顧好比較重要。圖文 CP 值高，短影音可以再等等。</div>
+    </div>
+    <div class="tension-row">
+      <div class="row-num">03</div>
+      <div class="row-title">決策知識累積</div>
+      <div class="row-status">小編開會有產出，但決策過程還沒有被記錄下來</div>
+      <div class="row-issue">工作流每次靠你的記憶重跑，比較難複製給 AI 或新人。這也是一人公司最容易卡住的地方。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 三個月核心槓桿 -->
+<section class="section" id="leverage">
+  <div class="section-head">
+    <div class="num-block">SECTION
+      <span class="num">02</span>
+    </div>
+    <div>
+      <h2>核心槓桿點</h2>
+      <p class="section-lead">這三個建議的共通邏輯：讓你現在做的事情，可以慢慢累積成你自己的資產，未來可以複製給員工，也可以複製給 AI。</p>
+    </div>
+  </div>
+
+  <div class="cta-grid">
+    <div class="cta-card">
+      <div class="cta-label">LEVERAGE 01</div>
+      <div class="cta-name">小編工作流升級</div>
+      <p class="cta-desc">你的流程已經對了：一週開一次會，訂主題、切受眾、講不同切點，再生素材。在這個基礎上，我想跟你補一件事——把「決策過程、判斷標準」也回寫進技能包。</p>
+      <ul class="cta-list">
+        <li>一週開一次會，訂三個主題</li>
+        <li>每個主題針對 2-3 個（或 3-5 個）受眾，講不同觀點</li>
+        <li>把你們的說話習慣與客戶反饋，訓練成知識</li>
+        <li>結果寄回技能包之外，把「為什麼這樣判斷」也回寫回去——這些都可以寫進 Skill 裡，慢慢累積成你的資產</li>
+      </ul>
+    </div>
+
+    <div class="cta-card">
+      <div class="cta-label">LEVERAGE 02</div>
+      <div class="cta-name">圖文先跑，短影音先等</div>
+      <p class="cta-desc">中文短影音目前 80% 是簡體中文工具，會帶大陸腔，偶爾冒出簡體詞彙，對台灣品牌信任度的傷害會比想像中嚴重。我自己也是把短影音先擱著。</p>
+      <ul class="cta-list">
+        <li>圖文 CP 值高：IG + Threads 用人機協作測風向</li>
+        <li>短影音可行路徑：你自己配聲音，AI 出講稿</li>
+        <li>聲音複製 API（ChatGPT、Grock）品質還在改善中</li>
+        <li>我會建議先避開：直接用大陸軟體大量生成中文影片</li>
+      </ul>
+    </div>
+
+    <div class="cta-card">
+      <div class="cta-label">LEVERAGE 03</div>
+      <div class="cta-name">建立管理技能包的技能包</div>
+      <p class="cta-desc">技能包寫多了，自己寫的加上網路上抓的，難免會撞在一起、互相搶觸發。我自己的解法是寫一個「管理技能包的技能包」當總管，有三個重點分享給你。</p>
+      <ul class="cta-list">
+        <li>優化觸發詞：一個技能包只配 1-2 個清楚的觸發詞，避免互相搶</li>
+        <li>新技能包篩選：幫你判斷網路抓來的是否適合你的工作流</li>
+        <li>整併與優化：太近的合併、太雜的拆分、寫工作日記持續迭代</li>
+      </ul>
+      <a class="cta-repo" href="https://jiang-yude.github.io/my-resources/" target="_blank" rel="noopener">
+        <span class="cta-repo-label">技能包大總管 · GitHub Pages</span>
+        <span class="cta-repo-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 不做清單 -->
+<section class="section" id="dont">
+  <div class="section-head">
+    <div class="num-block">SECTION
+      <span class="num">03</span>
+    </div>
+    <div>
+      <h2>不做清單</h2>
+      <p class="section-lead">除了該做的，也想跟你聊聊現在可以先放一放的四件事。一人公司的時間很寶貴，這幾件以目前的工具成熟度來看，先觀察會比較划算。</p>
+    </div>
+  </div>
+
+  <div class="dont-list">
+    <div class="dont-row">
+      <div class="dont-name">ERP 自動化（自己開發）</div>
+      <div class="dont-reason">Claude 已開始串電商 API，工具 7-8 個月後成熟。現在自己爬，撞到的多半是 Claude 即將解決的問題。</div>
+      <div class="dont-when">2026 年底重評</div>
+    </div>
+    <div class="dont-row">
+      <div class="dont-name">AI 自動化客服（自建）</div>
+      <div class="dont-reason">量大時上下文爆炸，維護成本高於第三方平台。客服是門面，穩定比省錢重要。先委外，但確保知識庫之後拿得回來。</div>
+      <div class="dont-when">先委外，未來切換</div>
+    </div>
+    <div class="dont-row">
+      <div class="dont-name">Outlook AI 全自動化</div>
+      <div class="dont-reason">大量 B2B email 上下文爆炸目前無解，AI 工程師都有踩坑案例。半自動人類監控可以稍微提升彙整效率。</div>
+      <div class="dont-when">持續半自動觀察</div>
+    </div>
+    <div class="dont-row">
+      <div class="dont-name">Manus 廣告自動化</div>
+      <div class="dont-reason">只接 Meta、費用貴、中資疑慮。等 1-2 個月內跨平台工具出現再評估，現在不划算。</div>
+      <div class="dont-when">1-2 個月內重評</div>
+    </div>
+  </div>
+</section>
+
+<!-- Manifesto 知識累積系統 -->
+<div class="manifesto" id="system">
+  <div class="inner">
+    <p class="eyebrow">KNOWLEDGE COMPOUNDING</p>
+    <h2>知識累積系統設計</h2>
+    <p>你真正最珍貴的，是你怎麼選到這個品的、你怎麼發現這個市場的、以及產品落地化的所有細節。這些隱性知識，現在都還留在你的腦子裡。</p>
+    <p>多數人會習慣把成果存下來，比較容易漏掉的，是把「決策過程、判斷標準」也回寫回去。這些其實都可以寫到 Skill 裡，慢慢就會長出一份只屬於你的判斷資產。</p>
+    <p>累積起來之後，這套能力你可以複製給員工，員工的能力也可以順著一起被複製起來。如果有些情境不適合員工處理，就交給 Agent。整套系統會跟著你一起成長。</p>
+    <p class="quote">AI 是放大器，會放大優勢，<br>也會把偏見、誤差、風險一起放大。<br>所以先把自己磨清楚，再讓 AI 來放大你。</p>
+  </div>
+</div>
+
+<!-- 附件 -->
+<section class="section" id="appendix">
+  <div class="section-head">
+    <div class="num-block">APPENDIX
+      <span class="num">04</span>
+    </div>
+    <div>
+      <h2>完整回放與延伸資源</h2>
+      <p class="section-lead">最上面是今天會議的完整錄影，讀策略書時哪一段想回頭聽脈絡，可以直接跳回去看。下面是延伸的方法論文章跟技能包，需要時再點開。</p>
+    </div>
+  </div>
+
+  <div class="attach-grid">
+    <div class="attach-card attach-list-card video-card">
+      <div class="attach-tag">VIDEO · 完整顧問回放</div>
+      <h3>2026/05/12 宏哥線上一對一諮詢 完整錄影</h3>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/y6O_pTqrfRo"
+                title="付費顧問回放：2026 05 12 宏哥 線上一對一諮詢"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+      <div class="attach-body">
+        <p>今天 09:00 開始的一對一顧問完整錄影，約 42 分鐘。如果讀策略書時想回去聽當下脈絡，可以直接在這裡播放，影片右下角點全螢幕；想在 YouTube 開可以點下方按鈕。</p>
+      </div>
+      <div class="video-cta-bar">
+        <a class="rec-link" href="https://youtu.be/y6O_pTqrfRo" target="_blank" rel="noopener">在 YouTube 開啟 <span class="rec-arrow">→</span></a>
+      </div>
+    </div>
+    <a class="attach-card attach-link attach-list-card" href="https://vocus.cc/article/6915720cfd89780001605e7d" target="_blank" rel="noopener">
+      <div class="attach-tag">APPENDIX A · 方格子文章</div>
+      <h3>逐字稿整理教學＋三層次會議記錄提示詞，把 AI 變成你的戰略分析師</h3>
+      <div class="attach-body">
+        <p>會議錄音真正的潛力，是成為你的戰略資料庫。這篇拆解會前準備、會中主持、會後整理三階段，告訴你如何用三層次提示詞，把會議記錄從流水帳，升級成可以「預測風險」「讀懂人心」「優化團隊協作」的戰略洞察。</p>
+        <p>裡面也包含錄音轉文字工具的比較（MacWhisper、Memo AI、Gemini、NotebookLM）、講者分離技巧、知識庫建立方法，提示詞可以直接複製使用。</p>
+      </div>
+      <div class="attach-cta">閱讀完整文章 <span class="arrow">→</span></div>
+    </a>
+
+    <div class="attach-card attach-list-card">
+      <div class="attach-tag">APPENDIX B · 推薦延伸閱讀、資源</div>
+      <h3>推薦延伸閱讀、資源</h3>
+      <div class="attach-body">
+        <p>從 5/5 嘉我好漾線上講座裡，挑出跟我們今天討論最相關的三個技能包跟三篇文章，省你時間。每一個我都加了「為什麼給你」一句話，讓你判斷要不要點進去看。</p>
+      </div>
+      <ul class="recommend-list">
+        <li>
+          <div class="rec-tag rec-tag-skill">技能包</div>
+          <div class="rec-content">
+            <div class="rec-title">納瓦爾·拉維坎特 AI 顧問技能包</div>
+            <div class="rec-why">建立一個納瓦爾風格的 AI 顧問。每次重要決策前，可以讓他用納瓦爾的長期思考角度反問你，補你看不見的盲點。對應策略書中提到的「補盲點的 AI 顧問」。</div>
+          </div>
+          <a class="rec-link" href="https://github.com/Jiang-Yude/naval-ravikant-skill" target="_blank" rel="noopener">GitHub <span class="rec-arrow">→</span></a>
+        </li>
+        <li>
+          <div class="rec-tag rec-tag-skill">技能包</div>
+          <div class="rec-content">
+            <div class="rec-title">真實需求調查技能包</div>
+            <div class="rec-why">跟小編討論主題、切受眾、找觀點時可以直接用。把客戶反饋丟進去，幫你抽出真實需求訊號。對應 LEVERAGE 01 小編工作流的受眾洞察。</div>
+          </div>
+          <a class="rec-link" href="https://github.com/Jiang-Yude/real-needs-investigation" target="_blank" rel="noopener">GitHub <span class="rec-arrow">→</span></a>
+        </li>
+        <li>
+          <div class="rec-tag rec-tag-skill">技能包</div>
+          <div class="rec-content">
+            <div class="rec-title">人格思維提煉技能包</div>
+            <div class="rec-why">如果除了納瓦爾，你還有其他信任的老師、書、Podcast，這個技能包可以幫你把他們提煉成 AI 顧問。每個都是你的補盲點來源，組成你專屬的決策諮詢團。</div>
+          </div>
+          <a class="rec-link" href="https://github.com/Jiang-Yude/persona-mind-distiller" target="_blank" rel="noopener">GitHub <span class="rec-arrow">→</span></a>
+        </li>
+        <li>
+          <div class="rec-tag rec-tag-skill">技能包</div>
+          <div class="rec-content">
+            <div class="rec-title">技能包大總管</div>
+            <div class="rec-why">直接對應 LEVERAGE 03。你裝了上面這些技能包之後，每個有自己的觸發詞、用法、邊界，難免會撞在一起。這個會幫你檢查觸發詞、評估新技能包要不要裝、整併太雜的、寫工作日記持續迭代。</div>
+          </div>
+          <a class="rec-link" href="https://github.com/Jiang-Yude/skill-curator" target="_blank" rel="noopener">GitHub <span class="rec-arrow">→</span></a>
+        </li>
+        <li>
+          <div class="rec-tag rec-tag-article">方格子</div>
+          <div class="rec-content">
+            <div class="rec-title">客戶都說很棒，但就是不買單？一招真實需求調查法</div>
+            <div class="rec-why">上面那個技能包背後的完整方法論。如果你想知道為什麼這樣設計、怎麼問才問得出真話，這篇講得最清楚。</div>
+          </div>
+          <a class="rec-link" href="https://vocus.cc/article/68c12abbfd89780001ed3ce2" target="_blank" rel="noopener">閱讀 <span class="rec-arrow">→</span></a>
+        </li>
+        <li>
+          <div class="rec-tag rec-tag-article">方格子</div>
+          <div class="rec-content">
+            <div class="rec-title">把專業知識、工作經驗、教學文章整理成技能包，讓 AI 幫你操作</div>
+            <div class="rec-why">直接對應 LEVERAGE 03。你跟小編一週開會累積出來的判斷，要怎麼提煉成技能包，這篇有完整步驟。</div>
+          </div>
+          <a class="rec-link" href="https://vocus.cc/article/6921de38fd8978000119ceb2" target="_blank" rel="noopener">閱讀 <span class="rec-arrow">→</span></a>
+        </li>
+        <li>
+          <div class="rec-tag rec-tag-article">方格子</div>
+          <div class="rec-content">
+            <div class="rec-title">AI 工具轉換無痛指南：建立個人知識庫，擺脫平台綁架</div>
+            <div class="rec-why">呼應我們今天聊到的「客服知識庫要確保拿得回來」。AI 工具會輪流當最強，把資料留在自己這邊才能跟著最強的走。</div>
+          </div>
+          <a class="rec-link" href="https://vocus.cc/article/693e8627fd8978000148f322" target="_blank" rel="noopener">閱讀 <span class="rec-arrow">→</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand-block">
+      <div class="name">江昱德 · 江江教練</div>
+      <div class="tagline">隱性知識提煉師 × AI 應用規劃師</div>
+      <p>主要服務：一對一顧問、AI 工作流設計、知識庫架構、AI 辦公室導入。專長將個人決策邏輯與隱性知識，提煉成可以放大、可以複製的 AI 工作流。</p>
+    </div>
+    <div>
+      <h5>策略書架構</h5>
+      <ul>
+        <li><a href="#current">01 現況快照</a></li>
+        <li><a href="#leverage">02 核心槓桿點</a></li>
+        <li><a href="#dont">03 不做清單</a></li>
+        <li><a href="#system">知識累積（深色區）</a></li>
+        <li><a href="#appendix">04 方法論附件</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>本次顧問</h5>
+      <ul>
+        <li>日期：2026-05-12</li>
+        <li>時長：約 42 分鐘</li>
+        <li>對象：宏哥</li>
+        <li>產業：美國代理電商</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2026 江昱德 · 一對一顧問策略書交付物</span>
+    <span>本文件僅供宏哥內部參考使用</span>
+  </div>
+</footer>
+
+</body>
+</html>
